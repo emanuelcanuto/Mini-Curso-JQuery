@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>Demo</title>
+   <script src="http://code.jquery.com/jquery-2.0.2.min.js"></script>
+   
+   <script type="text/javascript">
+   		$(document).ready(function(){
+
+   			// Elementos
+			$("a");
+   			console.log( $("a").text() );	// jQuery
+
+			// Id
+   			$("#brasil").text("Brasilllllll!!!");
+			console.log( $("#argentina").text() );    // Argentina
+
+			// Class
+			$(".paises");
+			console.log( $(".paises li").text("Eh Brasil") );  //Brasil
+
+		});
+   </script>
+
+</head>
+	<body>   		
+		<a href="http://jquery.com/">jQuery</a>
+		<ul class="paises">
+			<li id="brasil">Brasil</li>
+			<li id="argentina">Argentina</li>
+		</ul>
+	</body>
+</html>
