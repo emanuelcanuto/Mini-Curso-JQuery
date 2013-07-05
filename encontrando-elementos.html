@@ -8,6 +8,10 @@
    <script type="text/javascript">
    		$(document).ready(function(){
 
+   			// Selecinar tudo
+			$("*");
+   			$("*").css("color","red");	// jQuery
+
    			// Elementos
 			$("a");
    			console.log( $("a").text() );	// jQuery
@@ -18,7 +22,11 @@
 
 			// Class
 			$(".paises");
-			console.log( $(".paises li").text("Eh Brasil") );  //Brasil
+			$(".paises li").text("Eh Brasil")  //Brasil
+
+			// Multi Seletor
+			$("a, ul, li");
+   			$("a, ul, li").css("border","3px dotted red");	// jQuery
 
 		});
    </script>
