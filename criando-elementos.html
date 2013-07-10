@@ -3,10 +3,46 @@
 <head>
    <meta charset="utf-8">
    <title>Demo</title>
+   <style type="text/css">
+   .hover-green{background-color: rgb(194, 243, 227)}
+   .hover-red{background-color: rgb(246, 193, 193)}
+   </style>
    <script src="http://code.jquery.com/jquery-2.0.2.min.js"></script>
    <script type="text/javascript">
       $(document).ready(function(){
-         $("div:has(p)").addClass("test");
+
+         // exemplo 1
+         $("<h2>")
+         .text("Meu Primeiro Elemento Criado! =)")
+         .appendTo("body");
+
+         // exemplo 2
+         $("<div>")
+         .text("Lista")
+         .hover(function(){            
+            $(this).toggleClass("hover-green")            
+         })
+         .css({border: "3px solid"})
+         .appendTo("body");
+
+         // exemplo 3
+         lista = [];
+         lista[0] = "Linha #1";
+         lista[1] = "Linha #2";
+         $("<ul>").append(function(){          
+
+            for (var i = 0; i < lista.length; i++) {               
+               $(this).append(
+                  $("<li>")
+                  .text(lista[i])
+                  .hover(function(){            
+                     $(this).toggleClass("hover-red")            
+                  })
+               );
+            }
+         }).appendTo("div");
+
+
       });
    </script>
 </head>
